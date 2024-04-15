@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="giuseppevitolo.FXMLDocumentController">
+   <children>
+      <SplitPane dividerPositions="0.29797979797979796" prefHeight="400.0" prefWidth="800.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <Label layoutX="72.0" layoutY="25.0" text="Control Panel" />
+                  <Label layoutX="27.0" layoutY="77.0" text="Sensor 1" />
+                  <Label layoutX="27.0" layoutY="122.0" text="Sensor 2" />
+                  <Label layoutX="42.0" layoutY="172.0" text="Hub" />
+                  <Button fx:id="startButtonS1" layoutX="110.0" layoutY="72.0" mnemonicParsing="false" onAction="#startActionS1" text="Start" />
+                  <Button fx:id="startButtonS2" layoutX="110.0" layoutY="117.0" mnemonicParsing="false" onAction="#startActionS2" text="Start" />
+                  <Button fx:id="hubButton" layoutX="110.0" layoutY="167.0" mnemonicParsing="false" onAction="#hubAction" text="Start" />
+                  <Button fx:id="exportButton" layoutX="72.0" layoutY="224.0" mnemonicParsing="false" onAction="#exportAction" text="Export" />
+                  <ProgressIndicator fx:id="indicator1" layoutX="151.0" layoutY="72.0" prefHeight="31.0" prefWidth="90.0" />
+                  <ProgressIndicator fx:id="indicator2" layoutX="151.0" layoutY="117.0" prefHeight="31.0" prefWidth="90.0" />
+                  <ProgressIndicator fx:id="indicator3" layoutX="151.0" layoutY="167.0" prefHeight="31.0" prefWidth="90.0" />
+               </children>
+            </AnchorPane>
+            <TableView fx:id="sensorTable" prefHeight="200.0" prefWidth="200.0">
+              <columns>
+                <TableColumn fx:id="sensorClm" prefWidth="127.0" text="Sensor ID" />
+                <TableColumn fx:id="timeClm" prefWidth="142.0" text="Time" />
+                  <TableColumn fx:id="valueClm" prefWidth="96.0" text="Value" />
+                  <TableColumn fx:id="unitClm" prefWidth="89.0" text="Unit" />
+                  <TableColumn fx:id="descriptionClm" prefWidth="102.0" text="Description" />
+              </columns>
+            </TableView>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
